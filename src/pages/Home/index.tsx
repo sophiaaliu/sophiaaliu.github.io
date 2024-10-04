@@ -8,7 +8,6 @@ import { Layout2 } from "./Layout2";
 import { useEffect, useRef } from "react";
 import { Easing, Tween } from "@tweenjs/tween.js";
 import {
-  LANDING_PAGE_ABOUT,
   LANDING_PAGE_ABOUT_1,
   LANDING_PAGE_ABOUT_2,
   LANDING_PAGE_ABOUT_3,
@@ -71,6 +70,25 @@ export const Home = (props: {
         { scrollTop: landingPageRef.current?.getBoundingClientRect().height },
         500,
       )
+      .easing(Easing.Quadratic.In)
+      .onUpdate(({ scrollTop }) => {
+        window?.scrollTo(0, scrollTop);
+      })
+      .start();
+
+    const animate = () => {
+      animationId = window.requestAnimationFrame(animate);
+      const isAnimationRunning = tween.update();
+      if (!isAnimationRunning) window.cancelAnimationFrame(animationId);
+    };
+
+    animate();
+  };
+
+  const onBackToTopClick = () => {
+    let animationId = -1;
+    const tween = new Tween({ scrollTop: window.scrollY })
+      .to({ scrollTop: 0 }, 500)
       .easing(Easing.Quadratic.In)
       .onUpdate(({ scrollTop }) => {
         window?.scrollTo(0, scrollTop);
@@ -180,6 +198,12 @@ export const Home = (props: {
 				<div className={styles.footnote} style={{ fontSize: getFootnoteFontSize() }}>
 					<span className={styles.footnoteText}>My Resume</span>
 				</div>*/}
+      </div>
+      <div className={styles.footer}>
+        <div className={styles.footer1}>Designed and coded by Sophia Liu.</div>
+        <div className={styles.footer2} onClick={onBackToTopClick}>
+          Back to top
+        </div>
       </div>
     </div>
   );

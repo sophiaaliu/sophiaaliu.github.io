@@ -7,7 +7,7 @@
   overflow-y: auto;
   background-color: rgba(255, 254, 248, 1);
   position: relative;
-  padding: 0 10%;
+  padding: 0 15%;
 }
 
 .backgroundImage {
@@ -23,7 +23,7 @@
 
 .landingPage {
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@
   font-size: 20px;
   font-weight: 700;
   color: rgba(19, 102, 255, 1);
-  margin-bottom: 24px;
+  margin-bottom: 44px;
   line-height: 36px;
 }
 
@@ -87,8 +87,9 @@
 }
 
 .workPage {
-  width: 90%;
+  width: 100%;
   max-width: 1440px;
+  margin-bottom: 116px;
 }
 
 .workPage.defaultMarginTop {
@@ -100,7 +101,7 @@
 }
 
 .work {
-  margin-bottom: 107px;
+  margin-bottom: 82px;
 }
 
 .work.smallMarginBottom {
@@ -126,5 +127,24 @@
 }
 
 .footnoteText {
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(19, 102, 255, 1);
+  margin-bottom: 197px;
+}
+
+.footer1 {
+  line-height: 40px;
+  margin-bottom: 12px;
+}
+
+.footer2 {
+  line-height: 40px;
+  text-decoration: underline;
   cursor: pointer;
 }
