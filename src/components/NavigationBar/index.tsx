@@ -1,13 +1,10 @@
-import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 import cls from "classnames";
 import { useWindowSize } from "../../lib/hooks";
 import { useEffect, useRef, useState } from "react";
 import { Easing, Tween } from "@tweenjs/tween.js";
 
-export const NavigationBar = (props: { scrollToWorkSection: () => void }) => {
-  const { scrollToWorkSection } = props;
-
+export const NavigationBar = () => {
   const { width } = useWindowSize();
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
   const isNavBarExpanded = useRef<boolean>(true);
@@ -72,6 +69,13 @@ export const NavigationBar = (props: { scrollToWorkSection: () => void }) => {
     isNavBarExpanded.current = false;
   };
 
+  const scrollToCaseStudies = () => {
+    const caseStudiesDiv = document.getElementById("case-studies");
+    if (!caseStudiesDiv) return;
+
+    caseStudiesDiv.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
     if (width >= 650) setIsMenuOpened(false);
   }, [width]);
@@ -110,36 +114,30 @@ export const NavigationBar = (props: { scrollToWorkSection: () => void }) => {
         })}
         ref={navBar}
       >
-        <span className={styles.name}>SOPHIA LIU</span>
+        <img src="./images/logo.png" className={styles.logo} />
         {width >= 650 && (
           <>
-            <Link
+            <a
               className={cls(styles.link, {
                 [styles.smallMarginRightLink]: width < 1000,
               })}
-              to="/"
-              onClick={() => scrollToWorkSection()}
+              onClick={() => scrollToCaseStudies()}
             >
               <span>WORK</span>
-            </Link>
-            <Link
+            </a>
+            <a
               className={cls(styles.link, {
                 [styles.smallMarginRightLink]: width < 1000,
               })}
-              to="https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing"
+              onClick={() => {
+                window.open(
+                  "https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing",
+                );
+                setIsMenuOpened(false);
+              }}
             >
               <span>RESUME</span>
-            </Link>
-            {false && (
-              <Link
-                className={cls(styles.link, {
-                  [styles.smallMarginRightLink]: width < 1000,
-                })}
-                to="/"
-              >
-                <span>ABOUT</span>
-              </Link>
-            )}
+            </a>
           </>
         )}
         {width < 650 && (
@@ -151,33 +149,30 @@ export const NavigationBar = (props: { scrollToWorkSection: () => void }) => {
         )}
         {isMenuOpened && (
           <div className={styles.links}>
-            <Link
+            <a
               className={cls(styles.link, {
                 [styles.smallMarginRightLink]: width < 1000,
               })}
-              to="/"
-              onClick={() => scrollToWorkSection()}
+              onClick={() => {
+                scrollToCaseStudies();
+                setIsMenuOpened(false);
+              }}
             >
               WORK
-            </Link>
-            <Link
+            </a>
+            <a
               className={cls(styles.link, {
                 [styles.smallMarginRightLink]: width < 1000,
               })}
-              to="https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing"
+              onClick={() => {
+                window.open(
+                  "https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing",
+                );
+                setIsMenuOpened(false);
+              }}
             >
               RESUME
-            </Link>
-            {false && (
-              <Link
-                className={cls(styles.link, {
-                  [styles.smallMarginRightLink]: width < 1000,
-                })}
-                to="/"
-              >
-                ABOUT
-              </Link>
-            )}
+            </a>
           </div>
         )}
       </div>

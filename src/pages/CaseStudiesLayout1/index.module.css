@@ -1,0 +1,125 @@
+.sectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: rgba(0, 62, 177, 1);
+}
+
+.sectionTitle.breakpoint1 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 76px;
+}
+
+.sectionTitle.breakpoint2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 76px;
+}
+
+.sectionTitle.breakpoint3 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 56px;
+}
+
+.caseStudy {
+  width: 100%;
+}
+
+.caseStudy.breakpoint1 {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 44px;
+}
+
+.caseStudy.breakpoint2 {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 32px;
+}
+
+.caseStudy:not(:last-of-type) {
+  margin-bottom: 100px;
+}
+
+.caseStudy.breakpoint3:not(:last-of-type) {
+  margin-bottom: 80px;
+}
+
+.info.breakpoint1 {
+  width: 408px;
+}
+
+.info.breakpoint2 {
+  flex-grow: 1;
+  width: 0;
+}
+
+.info.breakpoint3 {
+  width: 100%;
+}
+
+.caseTitle {
+  font-family: "Nunito Sans", "Lato", sans-serif;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgba(0, 62, 177, 1);
+  letter-spacing: 0.04px;
+  margin-bottom: 8px;
+}
+
+.caseDescription {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 0.24px;
+  margin-bottom: 16px;
+}
+
+.caseTimeline {
+  font-family: "Nunito Sans", "Lato", sans-serif;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 0.04px;
+}
+
+.caseDescription > span {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 1962 / 1014;
+}
+
+.imageWrapper.breakpoint1 {
+  flex-grow: 1;
+}
+
+.imageWrapper.breakpoint2 {
+  flex-grow: 1;
+}
+
+.imageWrapper.breakpoint3 {
+  width: 100%;
+  margin-bottom: 44px;
+}
+
+.image {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50 !important;
+}

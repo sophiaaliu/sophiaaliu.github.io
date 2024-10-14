@@ -1,88 +1,32 @@
 import cls from "classnames";
 import styles from "./index.module.css";
-import { BrowseWorkPrompt } from "../../components/BrowseWorkPrompt";
-import { Work } from "../../components/Work";
 import { useWindowSize } from "../../lib/hooks";
-import { Layout1 } from "./Layout1";
-import { Layout2 } from "./Layout2";
-import { useEffect, useRef } from "react";
+import { IntroLayout1 } from "../IntroLayout1";
+import { IntroLayout2 } from "../IntroLayout2";
 import { Easing, Tween } from "@tweenjs/tween.js";
 import {
   LANDING_PAGE_ABOUT_1,
   LANDING_PAGE_ABOUT_2,
   LANDING_PAGE_ABOUT_3,
 } from "../../lib/constants";
-import { useLocation } from "react-router";
+import { CaseStudiesLayout1 } from "../CaseStudiesLayout1";
+import { OtherWorkLayout1 } from "../OtherWorkLayout1";
+import { NavigationBar } from "../../components/NavigationBar";
 
-export const Home = (props: {
-  setWorkSectionTop: React.Dispatch<React.SetStateAction<number>>;
-}) => {
-  const { setWorkSectionTop } = props;
-
+export const Home = () => {
   const { width } = useWindowSize();
-  const landingPageRef = useRef<HTMLDivElement>(null);
-  const workPageRef = useRef<HTMLDivElement>(null);
 
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    if (pathname === "/work") {
-      if (workPageRef.current) {
-        window.scrollTo(
-          0,
-          workPageRef.current.getBoundingClientRect().top ?? 0,
-        );
-      }
-    }
-  }, [pathname]);
-
-  useEffect(() => {
-    const onWindowResize = () => {
-      if (workPageRef.current) {
-        setWorkSectionTop(workPageRef.current.getBoundingClientRect().top ?? 0);
-      }
-    };
-    window.addEventListener("resize", onWindowResize);
-    onWindowResize();
-    return () => window.removeEventListener("resize", onWindowResize);
-  }, []);
-
-  const getLayout = () => {
-    if (width >= 800) return <Layout1 />;
-    return <Layout2 />;
+  const getIntroLayout = () => {
+    if (width > 1260) return <IntroLayout1 />;
+    return <IntroLayout2 />;
   };
 
-  const getAboutFootSize = () => {
-    if (width >= 1000) return "20px";
-    else return "16px";
+  const getCaseStudiesLayout = () => {
+    return <CaseStudiesLayout1 />;
   };
 
-  const getLinkFontSize = () => {
-    if (width >= 1000) return "20px";
-    else return "16px";
-  };
-
-  const onBrowseWork = () => {
-    if (!landingPageRef.current) return;
-    let animationId = -1;
-    const tween = new Tween({ scrollTop: window.scrollY })
-      .to(
-        { scrollTop: landingPageRef.current?.getBoundingClientRect().height },
-        500,
-      )
-      .easing(Easing.Quadratic.In)
-      .onUpdate(({ scrollTop }) => {
-        window?.scrollTo(0, scrollTop);
-      })
-      .start();
-
-    const animate = () => {
-      animationId = window.requestAnimationFrame(animate);
-      const isAnimationRunning = tween.update();
-      if (!isAnimationRunning) window.cancelAnimationFrame(animationId);
-    };
-
-    animate();
+  const getOtherWorkLayout = () => {
+    return <OtherWorkLayout1 />;
   };
 
   const onBackToTopClick = () => {
@@ -105,104 +49,74 @@ export const Home = (props: {
   };
 
   return (
-    <div className={styles.home}>
+    <div className={styles.homeWrapper}>
+      <NavigationBar />
       <div className={styles.backgroundImage} />
       <div
-        ref={landingPageRef}
-        className={cls(
-          styles.landingPage,
-          width >= 800 ? styles.defaultPaddingTop : styles.smallPaddingTop,
-        )}
+        className={cls(styles.home, {
+          [styles.breakpoint1]: width > 1260,
+          [styles.breakpoint2]: width > 900 && width <= 1260,
+          [styles.breakpoint3]: width <= 900,
+        })}
       >
-        {getLayout()}
         <div
-          className={cls(styles.about, {
-            [styles.small]: width < 1000,
+          className={cls(
+            styles.intro,
+            width >= 800 ? styles.defaultPaddingTop : styles.smallPaddingTop,
+          )}
+        >
+          {getIntroLayout()}
+          <div
+            className={cls(styles.about, {
+              [styles.breakpoint1]: width > 1260,
+              [styles.breakpoint2]: width <= 1260,
+            })}
+          >
+            <div>{LANDING_PAGE_ABOUT_1}</div>
+            <div>{LANDING_PAGE_ABOUT_2}</div>
+            <div>{LANDING_PAGE_ABOUT_3}</div>
+          </div>
+          <div className={styles.links}>
+            <div
+              className={styles.link}
+              onClick={() => window.open("mailto:sliu56@pratt.edu")}
+            >
+              Email
+            </div>
+            <div
+              className={styles.link}
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/sophia-liu-designs/")
+              }
+            >
+              Linkedin
+            </div>
+          </div>
+        </div>
+        <div
+          className={cls(styles.caseStudies, {
+            [styles.breakpoint1]: width > 800,
+            [styles.breakpoint2]: width <= 800,
+          })}
+          id="case-studies"
+        >
+          {getCaseStudiesLayout()}
+        </div>
+        <div
+          className={cls(styles.otherWorkPage, {
+            [styles.breakpoint1]: width > 800,
+            [styles.breakpoint2]: width <= 800,
           })}
         >
-          <div>{LANDING_PAGE_ABOUT_1}</div>
-          <div>{LANDING_PAGE_ABOUT_2}</div>
-          <div>{LANDING_PAGE_ABOUT_3}</div>
+          {getOtherWorkLayout()}
         </div>
-        <div className={styles.links}>
-          <div
-            className={styles.link}
-            style={{
-              fontSize: getLinkFontSize(),
-            }}
-            onClick={() => window.open("mailto:sliu56@pratt.edu")}
-          >
-            Email
+        <div className={styles.footer}>
+          <div className={styles.footer1}>
+            Designed and coded by Sophia Liu.
           </div>
-          <div
-            className={styles.link}
-            style={{
-              fontSize: getLinkFontSize(),
-            }}
-            onClick={() =>
-              window.open("https://www.linkedin.com/in/sophia-liu-designs/")
-            }
-          >
-            Linkedin
+          <div className={styles.footer2} onClick={onBackToTopClick}>
+            Back to top
           </div>
-        </div>
-        {false && (
-          <div className={styles.browseProjectsPrompt}>
-            <BrowseWorkPrompt onClick={onBrowseWork} />
-          </div>
-        )}
-      </div>
-      <div
-        className={cls(
-          styles.workPage,
-          width >= 800 ? styles.defaultMarginTop : styles.smallMarginTop,
-        )}
-        ref={workPageRef}
-      >
-        <Work
-          imageSrc="./images/tempo.png"
-          imageHref="https://sophiaa-liu.webflow.io/tempo-ai"
-          title="Tempo Labs (YC S23)"
-          summary="Start-up / 10 weeks / Internship / 2024"
-          description="AI-powered IDE that streamlines flow from idea to MVP for start-up founders"
-          className={cls(styles.work, {
-            [styles.smallMarginBottom]: width < 1200,
-          })}
-        />
-        <Work
-          imageSrc="./images/develop_for_good.png"
-          imageHref="https://sophiaa-liu.webflow.io/develop-for-good"
-          title="Horizon: a mentoring app"
-          summary="Volunteer / 16 weeks / Develop for Good / 2024"
-          description="Designing for 1-1 relationship growth for the foster care community"
-          className={cls(styles.work, {
-            [styles.smallMarginBottom]: width < 1200,
-          })}
-        />
-        <Work
-          imageSrc="./images/wayfarer.png"
-          imageHref="https://sophiaa-liu.webflow.io/wayfarer"
-          title="Wayfarer AI"
-          summary="passion project / 12 weeks / 2024"
-          description="Designing an AI co-pilot for flexibility and trip-planning on-the-go"
-          className={cls(styles.work, {
-            [styles.smallMarginBottom]: width < 1200,
-          })}
-        />
-        {/*<div className={styles.footnote} style={{ fontSize: getFootnoteFontSize() }}>
-					<span className={styles.footnoteText}>Contact Me</span>
-				</div>
-				<div className={styles.footnote} style={{ fontSize: getFootnoteFontSize() }}>
-					<span className={styles.footnoteText}>Learn More About Me</span>
-				</div>
-				<div className={styles.footnote} style={{ fontSize: getFootnoteFontSize() }}>
-					<span className={styles.footnoteText}>My Resume</span>
-				</div>*/}
-      </div>
-      <div className={styles.footer}>
-        <div className={styles.footer1}>Designed and coded by Sophia Liu.</div>
-        <div className={styles.footer2} onClick={onBackToTopClick}>
-          Back to top
         </div>
       </div>
     </div>

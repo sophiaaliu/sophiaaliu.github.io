@@ -1,13 +1,10 @@
-.home {
-  box-sizing: border-box;
+.homeWrapper {
   width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-  background-color: rgba(255, 254, 248, 1);
+  justify-content: center;
   position: relative;
-  padding: 0 15%;
+  background-color: rgba(255, 254, 248, 1);
+  min-width: 440px;
 }
 
 .backgroundImage {
@@ -21,130 +18,123 @@
   pointer-events: none;
 }
 
-.landingPage {
+.home {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.home.breakpoint1 {
+  width: 1106px;
+}
+
+.home.breakpoint2 {
+  width: 840px;
+}
+
+.home.breakpoint3 {
+  margin-left: 44px;
+  margin-right: 44px;
+}
+
+.intro {
   box-sizing: border-box;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.landingPage.defaultPaddingTop {
+.intro.defaultPaddingTop {
   padding-top: 132px;
 }
 
-.landingPage.smallPaddingTop {
+.intro.smallPaddingTop {
   padding-top: 112px;
 }
 
-.line {
-  display: flex;
-  align-items: center;
-}
-
-.lineTitle {
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-}
-
 .about {
+  font-family: "Montserrat", sans-serif;
   width: 100%;
-  font-size: 20px;
-  font-weight: 700;
-  color: rgba(19, 102, 255, 1);
+  color: rgba(0, 62, 177, 1);
   margin-bottom: 44px;
-  line-height: 36px;
 }
 
-.about.small {
-  line-height: 28px;
-  font-size: 16px;
+.about.breakpoint1 {
+  font-weight: 600;
+  line-height: 40px;
+  font-size: 24px;
+}
+
+.about.breakpoint2 {
+  font-weight: 600;
+  line-height: 32px;
+  font-size: 20px;
+  letter-spacing: 0.32px;
 }
 
 .links {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  font-weight: 700;
-  color: rgba(19, 102, 255, 1);
+  color: rgba(0, 62, 177, 1);
   gap: 25px;
 }
 
 .link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
   cursor: pointer;
-  border-bottom: 1px solid rgba(19, 102, 255, 1);
+  border-bottom: 1px solid rgba(0, 62, 177, 1);
   outline: none;
 }
 
-.browseProjectsPrompt {
+.caseStudies {
+  box-sizing: border-box;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: auto;
 }
 
-.workPage {
+.caseStudies.breakpoint1 {
+  padding-top: 120px;
+  margin-bottom: 120px;
+}
+
+.caseStudies.breakpoint2 {
+  padding-top: 92px;
+  margin-bottom: 92px;
+}
+
+.otherWorkPage {
   width: 100%;
-  max-width: 1440px;
-  margin-bottom: 116px;
 }
 
-.workPage.defaultMarginTop {
-  margin-top: 56px;
+.otherWorkPage.breakpoint1 {
+  margin-bottom: 120px;
 }
 
-.workPage.smallMarginTop {
-  margin-top: 48px;
-}
-
-.work {
-  margin-bottom: 82px;
-}
-
-.work.smallMarginBottom {
-  margin-bottom: 60px;
-}
-
-.footnote {
-  font-family: "DM Sans";
-  font-weight: 400;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.lastFootnote {
-  font-family: "DM Sans";
-  font-weight: 400;
-  font-size: 32px;
-  margin-bottom: 0px;
-}
-
-.footnote:last-of-type {
-  margin-bottom: 0;
-}
-
-.footnoteText {
-  cursor: pointer;
+.otherWorkPage.breakpoint2 {
+  margin-bottom: 92px;
 }
 
 .footer {
+  font-family: "Nunito Sans", "Lato", sans-serif;
   width: 100%;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 20px;
-  color: rgba(19, 102, 255, 1);
-  margin-bottom: 197px;
+  line-height: 40px;
+  color: rgba(0, 62, 177, 1);
+  margin-bottom: 160px;
 }
 
 .footer1 {
-  line-height: 40px;
   margin-bottom: 12px;
 }
 
 .footer2 {
-  line-height: 40px;
   text-decoration: underline;
   cursor: pointer;
 }

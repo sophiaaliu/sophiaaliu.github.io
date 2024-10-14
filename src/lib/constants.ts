@@ -32,9 +32,9 @@ export const LANDING_PAGE_ABOUT =
   "I am currently based in Brooklyn and working towards an M.S. Interactive Experience Design at Pratt Institute. I am passionate about working with diverse groups of clients and users.";
 
 export const LANDING_PAGE_ABOUT_1 =
-  "Currently based in Brooklyn📍, I study Human-Computer Interaction at Pratt Institute 👩‍💻.";
+  "👩‍💻 Studying Design and Human-Computer Interaction at Pratt Institute in NYC.";
 
 export const LANDING_PAGE_ABOUT_2 =
-  "I solve complex problems with simple—but not simplistic—solutions 🗝️.";
+  "🗝️ Solving complex problems with simple—but not simplistic—solutions .";
 
-export const LANDING_PAGE_ABOUT_3 = "Let’s chat ☕️ -";
+export const LANDING_PAGE_ABOUT_3 = "☕️ Let’s chat-";

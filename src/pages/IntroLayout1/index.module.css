@@ -1,0 +1,98 @@
+.prompt {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.bluePrompt {
+  color: rgba(19, 102, 255, 1);
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 32px;
+  column-gap: 44px;
+}
+
+.row.lastRow {
+  margin-bottom: 44px;
+}
+
+.name {
+  width: 400px !important;
+  height: 96px !important;
+  font-weight: 700;
+}
+
+.role {
+  color: rgba(239, 84, 0, 1);
+  width: 400px;
+}
+
+.do {
+  color: rgba(164, 0, 234, 1);
+  flex: 1;
+}
+
+.dropdown {
+  width: 100%;
+  height: 96px;
+}
+
+.dropdownSelected {
+  font-family: "Nunito Sans", "Lato", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  height: 96px;
+}
+
+.dropdownSelected.orange {
+  background-color: rgba(255, 244, 234, 1);
+  border-color: rgba(255, 92, 4, 1);
+}
+
+.dropdownSelected.purple {
+  background-color: rgba(252, 248, 255, 1);
+  border-color: rgba(164, 0, 234, 1);
+}
+
+.dropdownOptions {
+  background-color: rgba(255, 244, 234, 1);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.dropdownOptions.orange {
+  background-color: rgba(255, 244, 234, 1);
+}
+
+.dropdownOptions.purple {
+  background-color: rgba(252, 248, 255, 1);
+}
+
+.dropdownOption {
+  height: 96px;
+}
+
+.dropdownOption.orange {
+  background-color: rgba(255, 244, 234, 1);
+  border-color: rgba(255, 92, 4, 1);
+}
+
+.dropdownOption.orange:hover {
+  background-color: rgba(255, 224, 208, 1);
+}
+
+.dropdownOption.purple {
+  background-color: rgba(252, 248, 255, 1);
+  border-color: rgba(164, 0, 234, 1);
+}
+
+.dropdownOption.purple:hover {
+  background-color: rgba(240, 226, 255, 1);
+}
