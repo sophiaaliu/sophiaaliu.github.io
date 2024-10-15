@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  background-color: rgba(255, 254, 248, 1);
+  background-color: #FEFEFE;
   min-width: 440px;
 }
 
