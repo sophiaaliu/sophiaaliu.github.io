@@ -260,7 +260,7 @@ export const CaseStudiesLayout1 = () => {
               </span>
             </div>
             <div className={cls(styles.caseTimeline)}>
-              <span>16-week project @ Develop for Good</span>
+              <span>16-week client project @ Develop for Good</span>
             </div>
           </div>,
           <div className={cls(styles.imageWrapper, getBreakPoint())}>
@@ -326,7 +326,7 @@ export const CaseStudiesLayout1 = () => {
               </span>
             </div>
             <div className={cls(styles.caseTimeline)}>
-              <span>14-week passion project</span>
+              <span>14-week independent project</span>
             </div>
           </div>,
           <div className={cls(styles.imageWrapper, getBreakPoint())}>

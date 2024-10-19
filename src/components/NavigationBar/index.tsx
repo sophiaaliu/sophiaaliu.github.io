@@ -13,6 +13,11 @@ export const NavigationBar = () => {
   const clipPathValRef = useRef<number>(0);
   const expandAnimationId = useRef<number>(-1);
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash === '#case-studies') scrollToCaseStudies();
+  }, []);
+
   const expandNavBar = () => {
     if (expandAnimationId.current !== -1)
       window.cancelAnimationFrame(expandAnimationId.current);
@@ -131,6 +136,19 @@ export const NavigationBar = () => {
               })}
               onClick={() => {
                 window.open(
+                  "https://sophiaa-liu.webflow.io/",
+                );
+                setIsMenuOpened(false);
+              }}
+            >
+              <span>ABOUT</span>
+            </a>
+            <a
+              className={cls(styles.link, {
+                [styles.smallMarginRightLink]: width < 1000,
+              })}
+              onClick={() => {
+                window.open(
                   "https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing",
                 );
                 setIsMenuOpened(false);
@@ -159,6 +177,19 @@ export const NavigationBar = () => {
               }}
             >
               WORK
+            </a>
+            <a
+              className={cls(styles.link, {
+                [styles.smallMarginRightLink]: width < 1000,
+              })}
+              onClick={() => {
+                window.open(
+                  "https://sophiaa-liu.webflow.io/",
+                );
+                setIsMenuOpened(false);
+              }}
+            >
+              <span>ABOUT</span>
             </a>
             <a
               className={cls(styles.link, {

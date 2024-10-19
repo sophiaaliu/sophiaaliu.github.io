@@ -100,6 +100,7 @@ export const Home = () => {
           })}
           id="case-studies"
         >
+          <a></a>
           {getCaseStudiesLayout()}
         </div>
         <div
