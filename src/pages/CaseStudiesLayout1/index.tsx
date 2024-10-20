@@ -145,13 +145,13 @@ export const CaseStudiesLayout1 = () => {
     animate();
   };
 
-  const toTempo = () => window.open("https://sophiaa-liu.webflow.io/tempo-ai");
+  const toTempo = () => window.open("https://sophiaa-liu.webflow.io/tempo-ai", '_self');
 
   const toDevelopForGood = () =>
-    window.open("https://sophiaa-liu.webflow.io/develop-for-good");
+    window.open("https://sophiaa-liu.webflow.io/develop-for-good", '_self');
 
   const toWayfarer = () =>
-    window.open("https://sophiaa-liu.webflow.io/wayfarer");
+    window.open("https://sophiaa-liu.webflow.io/wayfarer", '_self');
 
   return (
     <>

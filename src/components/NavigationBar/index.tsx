@@ -115,7 +115,7 @@ export const NavigationBar = () => {
     <>
       <div
         className={cls(styles.navBar, {
-          [styles.smallPadding]: width < 1000,
+          [styles.breakpoint1]: width < 1000,
         })}
         ref={navBar}
       >
@@ -123,20 +123,17 @@ export const NavigationBar = () => {
         {width >= 650 && (
           <>
             <a
-              className={cls(styles.link, {
-                [styles.smallMarginRightLink]: width < 1000,
-              })}
+              className={cls(styles.link)}
               onClick={() => scrollToCaseStudies()}
             >
               <span>WORK</span>
             </a>
             <a
-              className={cls(styles.link, {
-                [styles.smallMarginRightLink]: width < 1000,
-              })}
+              className={cls(styles.link)}
               onClick={() => {
                 window.open(
                   "https://sophiaa-liu.webflow.io/",
+                  '_self'
                 );
                 setIsMenuOpened(false);
               }}
@@ -144,9 +141,7 @@ export const NavigationBar = () => {
               <span>ABOUT</span>
             </a>
             <a
-              className={cls(styles.link, {
-                [styles.smallMarginRightLink]: width < 1000,
-              })}
+              className={cls(styles.link)}
               onClick={() => {
                 window.open(
                   "https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing",

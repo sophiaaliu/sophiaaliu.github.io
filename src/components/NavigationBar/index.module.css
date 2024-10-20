@@ -4,7 +4,7 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: 0 64px;
+  padding: 0 50px;
   background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
   top: 0;
@@ -17,8 +17,9 @@
   backdrop-filter: blur(8px);
 }
 
-.smallPadding {
-  padding: 0 32px;
+.navBar.breakpoint1 {
+  padding: 0 30px;
+  font-size: 12px;
 }
 
 .logo {
@@ -30,18 +31,11 @@
   text-decoration: none;
   cursor: pointer;
   line-height: 20px;
+  padding: 0 20px;
 }
 
 .link:hover {
   color: #060707;
-}
-
-.link:not(:last-of-type) {
-  margin-right: 86px;
-}
-
-.smallMarginRightLink:not(:last-of-type) {
-  margin-right: 64px !important;
 }
 
 .link:first-of-type {
@@ -55,11 +49,11 @@
 
 .links {
   position: absolute;
-  right: 0px;
+  right: 30px;
   top: 88px;
   z-index: 1200;
   width: 100px;
-  font-size: 20px;
+  font-size: 16px;
   padding-right: 24px;
   color: rgba(26, 27, 31, 0.6);
 }
