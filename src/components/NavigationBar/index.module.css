@@ -65,6 +65,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
 }
 
 .links a:hover {
