@@ -91,12 +91,15 @@
   letter-spacing: 0.04px;
 }
 
-.caseDescription > span {
+.caseDescription > a {
   cursor: pointer;
   display: inline-block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .imageWrapper {
+  display: block;
   position: relative;
   aspect-ratio: 1962 / 1014;
 }

@@ -145,14 +145,6 @@ export const CaseStudiesLayout1 = () => {
     animate();
   };
 
-  const toTempo = () => window.open("https://sophiaa-liu.webflow.io/tempo-ai", '_self');
-
-  const toDevelopForGood = () =>
-    window.open("https://sophiaa-liu.webflow.io/develop-for-good", '_self');
-
-  const toWayfarer = () =>
-    window.open("https://sophiaa-liu.webflow.io/wayfarer", '_self');
-
   return (
     <>
       <div className={cls(styles.sectionTitle, getBreakPoint())}>
@@ -167,8 +159,8 @@ export const CaseStudiesLayout1 = () => {
               </span>
             </div>
             <div className={cls(styles.caseDescription)} ref={description1Ref}>
-              <span
-                onClick={toTempo}
+              <a
+                href='https://sophiaa-liu.webflow.io/tempo-ai'
                 onMouseEnter={() =>
                   highlightCaseStudy(
                     image1Ref,
@@ -191,17 +183,16 @@ export const CaseStudiesLayout1 = () => {
               >
                 AI-aided product development dashboard that streamlines idea →
                 MVP
-              </span>
+              </a>
             </div>
             <div className={cls(styles.caseTimeline)}>
               <span>10-week Internship @ Tempo Labs (YC S23)</span>
             </div>
           </div>,
-          <div className={cls(styles.imageWrapper, getBreakPoint())}>
+          <a className={cls(styles.imageWrapper, getBreakPoint())} href='https://sophiaa-liu.webflow.io/tempo-ai'>
             <img
               src="./images/tempo.png"
               className={cls(styles.image)}
-              onClick={toTempo}
               ref={image1Ref}
               onMouseEnter={() =>
                 highlightCaseStudy(
@@ -223,7 +214,7 @@ export const CaseStudiesLayout1 = () => {
                 )
               }
             />
-          </div>,
+          </a>,
         )}
       </div>
       <div className={cls(styles.caseStudy, getBreakPoint())}>
@@ -233,8 +224,8 @@ export const CaseStudiesLayout1 = () => {
               <span>EdTech / Mental health / Conversational UX / Mobile</span>
             </div>
             <div className={cls(styles.caseDescription)} ref={description2Ref}>
-              <span
-                onClick={toDevelopForGood}
+              <a
+                href='https://sophiaa-liu.webflow.io/develop-for-good'
                 onMouseEnter={() =>
                   highlightCaseStudy(
                     image2Ref,
@@ -257,18 +248,17 @@ export const CaseStudiesLayout1 = () => {
               >
                 Horizon: a mentoring app that prioritizes engagement and
                 flexibility
-              </span>
+              </a>
             </div>
             <div className={cls(styles.caseTimeline)}>
               <span>16-week client project @ Develop for Good</span>
             </div>
           </div>,
-          <div className={cls(styles.imageWrapper, getBreakPoint())}>
+          <a className={cls(styles.imageWrapper, getBreakPoint())} href='https://sophiaa-liu.webflow.io/develop-for-good'>
             <img
               src="./images/develop_for_good.png"
               className={cls(styles.image)}
               ref={image2Ref}
-              onClick={toDevelopForGood}
               onMouseEnter={() =>
                 highlightCaseStudy(
                   image2Ref,
@@ -289,7 +279,7 @@ export const CaseStudiesLayout1 = () => {
                 )
               }
             />
-          </div>,
+          </a>,
         )}
       </div>
       <div className={cls(styles.caseStudy, getBreakPoint())}>
@@ -299,8 +289,8 @@ export const CaseStudiesLayout1 = () => {
               <span>AI tool / Mobile app design / Accessibility</span>
             </div>
             <div className={cls(styles.caseDescription)} ref={description3Ref}>
-              <span
-                onClick={toWayfarer}
+              <a
+                href='https://sophiaa-liu.webflow.io/wayfarer'
                 onMouseEnter={() =>
                   highlightCaseStudy(
                     image3Ref,
@@ -323,18 +313,17 @@ export const CaseStudiesLayout1 = () => {
               >
                 AI trip-planning tool that combines search and plan for
                 last-minute changes
-              </span>
+              </a>
             </div>
             <div className={cls(styles.caseTimeline)}>
               <span>14-week independent project</span>
             </div>
           </div>,
-          <div className={cls(styles.imageWrapper, getBreakPoint())}>
+          <a className={cls(styles.imageWrapper, getBreakPoint())} href='https://sophiaa-liu.webflow.io/wayfarer'>
             <img
               src="./images/wayfarer.png"
               className={cls(styles.image)}
               ref={image3Ref}
-              onClick={toWayfarer}
               onMouseEnter={() =>
                 highlightCaseStudy(
                   image3Ref,
@@ -355,7 +344,7 @@ export const CaseStudiesLayout1 = () => {
                 )
               }
             />
-          </div>,
+          </a>,
         )}
       </div>
     </>

@@ -85,6 +85,7 @@ export const NavigationBar = () => {
     if (width >= 650) setIsMenuOpened(false);
   }, [width]);
 
+  /*
   useEffect(() => {
     const windowOnScroll = () => {
       // scrolling down
@@ -110,6 +111,7 @@ export const NavigationBar = () => {
       window.removeEventListener("scroll", windowOnScroll);
     };
   });
+  */
 
   return (
     <>
@@ -130,24 +132,13 @@ export const NavigationBar = () => {
             </a>
             <a
               className={cls(styles.link)}
-              onClick={() => {
-                window.open(
-                  "https://sophiaa-liu.webflow.io/",
-                  '_self'
-                );
-                setIsMenuOpened(false);
-              }}
+              href='https://sophiaa-liu.webflow.io/'
             >
               <span>ABOUT</span>
             </a>
             <a
               className={cls(styles.link)}
-              onClick={() => {
-                window.open(
-                  "https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing",
-                );
-                setIsMenuOpened(false);
-              }}
+              href='https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing'
             >
               <span>RESUME</span>
             </a>
@@ -177,12 +168,7 @@ export const NavigationBar = () => {
               className={cls(styles.link, {
                 [styles.smallMarginRightLink]: width < 1000,
               })}
-              onClick={() => {
-                window.open(
-                  "https://sophiaa-liu.webflow.io/",
-                );
-                setIsMenuOpened(false);
-              }}
+              href='https://sophiaa-liu.webflow.io/'
             >
               <span>ABOUT</span>
             </a>
@@ -190,12 +176,7 @@ export const NavigationBar = () => {
               className={cls(styles.link, {
                 [styles.smallMarginRightLink]: width < 1000,
               })}
-              onClick={() => {
-                window.open(
-                  "https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing",
-                );
-                setIsMenuOpened(false);
-              }}
+              href='https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing'
             >
               RESUME
             </a>
