@@ -27,10 +27,16 @@
   display: flex;
   column-gap: 44px;
   align-items: flex-start;
+  margin-bottom: 44px;
 }
 
 .works.breakpoint3 {
   display: block;
+  margin-bottom: 44px;
+}
+
+.works.breakpoint3:last-of-type {
+  margin-bottom: 0;
 }
 
 .work {
@@ -46,6 +52,7 @@
 }
 
 .imageWrapper {
+  display: block;
   width: 100%;
   position: relative;
   aspect-ratio: 1560 / 972;
@@ -80,7 +87,9 @@
   line-height: 28px;
 }
 
-.description > span {
+.description > a {
   cursor: pointer;
   display: inline-block;
+  text-decoration: none;
+  color: inherit;
 }
