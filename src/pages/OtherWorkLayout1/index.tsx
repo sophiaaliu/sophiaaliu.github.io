@@ -58,14 +58,17 @@ export const OtherWorkLayout1 = () => {
       b: fontColorRef.current.b,
       a: fontColorRef.current.a,
     })
-      .to({
-        color: 0.2,
-        width: 104,
-        r: targetFontColor.r,
-        g: targetFontColor.g,
-        b: targetFontColor.b,
-        a: targetFontColor.a,
-      }, 100)
+      .to(
+        {
+          color: 0.2,
+          width: 104,
+          r: targetFontColor.r,
+          g: targetFontColor.g,
+          b: targetFontColor.b,
+          a: targetFontColor.a,
+        },
+        100,
+      )
       .easing(Easing.Quadratic.In)
       .onUpdate(({ color, width, r, g, b, a }) => {
         if (imageRef.current) {
@@ -137,16 +140,32 @@ export const OtherWorkLayout1 = () => {
       </div>
       <div className={cls(styles.works, getBreakPoint())}>
         <div className={cls(styles.work, getBreakPoint())}>
-          <a className={styles.imageWrapper} href='https://ixd.prattsi.org/2024/09/redesigning-zooms-invitation-flow/'>
+          <a
+            className={styles.imageWrapper}
+            href="https://ixd.prattsi.org/2024/09/redesigning-zooms-invitation-flow/"
+          >
             <img
               src="./images/zoom_redesign.png"
               className={styles.image}
               ref={image1Ref}
               onMouseEnter={() =>
-                highlightWork(image1Ref, boxShadowColo1Ref, imageWidth1Ref, description1Ref, fontColor1Ref, { r: 19, g: 102, b: 255, a: 1 })
+                highlightWork(
+                  image1Ref,
+                  boxShadowColo1Ref,
+                  imageWidth1Ref,
+                  description1Ref,
+                  fontColor1Ref,
+                  { r: 19, g: 102, b: 255, a: 1 },
+                )
               }
               onMouseLeave={() =>
-                resetWork(image1Ref, boxShadowColo1Ref, imageWidth1Ref, description1Ref, fontColor1Ref)
+                resetWork(
+                  image1Ref,
+                  boxShadowColo1Ref,
+                  imageWidth1Ref,
+                  description1Ref,
+                  fontColor1Ref,
+                )
               }
             />
           </a>
@@ -155,12 +174,25 @@ export const OtherWorkLayout1 = () => {
           </div>
           <div className={cls(styles.description)} ref={description1Ref}>
             <a
-              href='https://ixd.prattsi.org/2024/09/redesigning-zooms-invitation-flow/'
+              href="https://ixd.prattsi.org/2024/09/redesigning-zooms-invitation-flow/"
               onMouseEnter={() =>
-                highlightWork(image1Ref, boxShadowColo1Ref, imageWidth1Ref, description1Ref, fontColor1Ref, { r: 19, g: 102, b: 255, a: 1 })
+                highlightWork(
+                  image1Ref,
+                  boxShadowColo1Ref,
+                  imageWidth1Ref,
+                  description1Ref,
+                  fontColor1Ref,
+                  { r: 19, g: 102, b: 255, a: 1 },
+                )
               }
               onMouseLeave={() =>
-                resetWork(image1Ref, boxShadowColo1Ref, imageWidth1Ref, description1Ref, fontColor1Ref)
+                resetWork(
+                  image1Ref,
+                  boxShadowColo1Ref,
+                  imageWidth1Ref,
+                  description1Ref,
+                  fontColor1Ref,
+                )
               }
             >
               Redesigning Zoom’s Invitation flow to improve usability and
@@ -169,16 +201,32 @@ export const OtherWorkLayout1 = () => {
           </div>
         </div>
         <div className={cls(styles.work, getBreakPoint())}>
-          <a className={styles.imageWrapper} href="https://www.figma.com/deck/8qZnYJvXw3LAnzPvQdnnYI/Redesigning-Film-Forum's-Conversion-Funnel?node-id=1-660&node-type=canvas&viewport=25%2C340%2C0.04&t=4ey1CQk18oNL83RS-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">
+          <a
+            className={styles.imageWrapper}
+            href="https://www.figma.com/deck/8qZnYJvXw3LAnzPvQdnnYI/Redesigning-Film-Forum's-Conversion-Funnel?node-id=1-660&node-type=canvas&viewport=25%2C340%2C0.04&t=4ey1CQk18oNL83RS-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+          >
             <img
               src="./images/film_forum.png"
               className={styles.image}
               ref={image2Ref}
               onMouseEnter={() =>
-                highlightWork(image2Ref, boxShadowColo2Ref, imageWidth2Ref, description2Ref, fontColor2Ref, { r: 19, g: 102, b: 255, a: 1 })
+                highlightWork(
+                  image2Ref,
+                  boxShadowColo2Ref,
+                  imageWidth2Ref,
+                  description2Ref,
+                  fontColor2Ref,
+                  { r: 19, g: 102, b: 255, a: 1 },
+                )
               }
               onMouseLeave={() =>
-                resetWork(image2Ref, boxShadowColo2Ref, imageWidth2Ref, description2Ref, fontColor2Ref)
+                resetWork(
+                  image2Ref,
+                  boxShadowColo2Ref,
+                  imageWidth2Ref,
+                  description2Ref,
+                  fontColor2Ref,
+                )
               }
             />
           </a>
@@ -191,10 +239,23 @@ export const OtherWorkLayout1 = () => {
             <a
               href="https://www.figma.com/deck/8qZnYJvXw3LAnzPvQdnnYI/Redesigning-Film-Forum's-Conversion-Funnel?node-id=1-660&node-type=canvas&viewport=25%2C340%2C0.04&t=4ey1CQk18oNL83RS-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
               onMouseEnter={() =>
-                highlightWork(image2Ref, boxShadowColo2Ref, imageWidth2Ref, description2Ref, fontColor2Ref, { r: 19, g: 102, b: 255, a: 1 })
+                highlightWork(
+                  image2Ref,
+                  boxShadowColo2Ref,
+                  imageWidth2Ref,
+                  description2Ref,
+                  fontColor2Ref,
+                  { r: 19, g: 102, b: 255, a: 1 },
+                )
               }
               onMouseLeave={() =>
-                resetWork(image2Ref, boxShadowColo2Ref, imageWidth2Ref, description2Ref, fontColor2Ref)
+                resetWork(
+                  image2Ref,
+                  boxShadowColo2Ref,
+                  imageWidth2Ref,
+                  description2Ref,
+                  fontColor2Ref,
+                )
               }
             >
               Redesigning Film Forum’s conversion funnel to increase ticket
@@ -205,16 +266,32 @@ export const OtherWorkLayout1 = () => {
       </div>
       <div className={cls(styles.works, getBreakPoint())}>
         <div className={cls(styles.work, getBreakPoint())}>
-          <a className={styles.imageWrapper} href='https://sophialiu1.notion.site/Designing-a-digital-workspace-for-reading-creative-idiosyncratic-books-0fe53e50f2ea48bcb5f9e8f43ff858a1?pvs=4'>
+          <a
+            className={styles.imageWrapper}
+            href="https://sophialiu1.notion.site/Designing-a-digital-workspace-for-reading-creative-idiosyncratic-books-0fe53e50f2ea48bcb5f9e8f43ff858a1?pvs=4"
+          >
             <img
               src="./images/dictee.png"
               className={styles.image}
               ref={image3Ref}
               onMouseEnter={() =>
-                highlightWork(image3Ref, boxShadowColo3Ref, imageWidth3Ref, description3Ref, fontColor3Ref, { r: 19, g: 102, b: 255, a: 1 })
+                highlightWork(
+                  image3Ref,
+                  boxShadowColo3Ref,
+                  imageWidth3Ref,
+                  description3Ref,
+                  fontColor3Ref,
+                  { r: 19, g: 102, b: 255, a: 1 },
+                )
               }
               onMouseLeave={() =>
-                resetWork(image3Ref, boxShadowColo3Ref, imageWidth3Ref, description3Ref, fontColor3Ref)
+                resetWork(
+                  image3Ref,
+                  boxShadowColo3Ref,
+                  imageWidth3Ref,
+                  description3Ref,
+                  fontColor3Ref,
+                )
               }
             />
           </a>
@@ -223,12 +300,25 @@ export const OtherWorkLayout1 = () => {
           </div>
           <div className={cls(styles.description)} ref={description3Ref}>
             <a
-              href='https://sophialiu1.notion.site/Designing-a-digital-workspace-for-reading-creative-idiosyncratic-books-0fe53e50f2ea48bcb5f9e8f43ff858a1?pvs=4'
+              href="https://sophialiu1.notion.site/Designing-a-digital-workspace-for-reading-creative-idiosyncratic-books-0fe53e50f2ea48bcb5f9e8f43ff858a1?pvs=4"
               onMouseEnter={() =>
-                highlightWork(image3Ref, boxShadowColo3Ref, imageWidth3Ref, description3Ref, fontColor3Ref, { r: 19, g: 102, b: 255, a: 1 })
+                highlightWork(
+                  image3Ref,
+                  boxShadowColo3Ref,
+                  imageWidth3Ref,
+                  description3Ref,
+                  fontColor3Ref,
+                  { r: 19, g: 102, b: 255, a: 1 },
+                )
               }
               onMouseLeave={() =>
-                resetWork(image3Ref, boxShadowColo3Ref, imageWidth3Ref, description3Ref, fontColor3Ref)
+                resetWork(
+                  image3Ref,
+                  boxShadowColo3Ref,
+                  imageWidth3Ref,
+                  description3Ref,
+                  fontColor3Ref,
+                )
               }
             >
               Dictee: a digital workspace for material texts
@@ -236,32 +326,59 @@ export const OtherWorkLayout1 = () => {
           </div>
         </div>
         <div className={cls(styles.work, getBreakPoint())}>
-          <a className={styles.imageWrapper} href="https://sophialiu1.notion.site/Two-Projects-using-ArcGIS-5e7f5a61558c472f84ab1f87a0c4b390?pvs=4">
+          <a
+            className={styles.imageWrapper}
+            href="https://sophialiu1.notion.site/Two-Projects-using-ArcGIS-5e7f5a61558c472f84ab1f87a0c4b390?pvs=4"
+          >
             <img
               src="./images/gis.png"
               className={styles.image}
               ref={image4Ref}
               onMouseEnter={() =>
-                highlightWork(image4Ref, boxShadowColo4Ref, imageWidth4Ref, description4Ref, fontColor4Ref, { r: 19, g: 102, b: 255, a: 1 })
+                highlightWork(
+                  image4Ref,
+                  boxShadowColo4Ref,
+                  imageWidth4Ref,
+                  description4Ref,
+                  fontColor4Ref,
+                  { r: 19, g: 102, b: 255, a: 1 },
+                )
               }
               onMouseLeave={() =>
-                resetWork(image4Ref, boxShadowColo4Ref, imageWidth4Ref, description4Ref, fontColor4Ref)
+                resetWork(
+                  image4Ref,
+                  boxShadowColo4Ref,
+                  imageWidth4Ref,
+                  description4Ref,
+                  fontColor4Ref,
+                )
               }
             />
           </a>
           <div className={cls(styles.title)}>
-            <span>
-              Data Visualization / Data Analysis / Mapping
-            </span>
+            <span>Data Visualization / Data Analysis / Mapping</span>
           </div>
           <div className={cls(styles.description)} ref={description4Ref}>
             <a
               href="https://sophialiu1.notion.site/Two-Projects-using-ArcGIS-5e7f5a61558c472f84ab1f87a0c4b390?pvs=4"
               onMouseEnter={() =>
-                highlightWork(image4Ref, boxShadowColo4Ref, imageWidth4Ref, description4Ref, fontColor4Ref, { r: 19, g: 102, b: 255, a: 1 })
+                highlightWork(
+                  image4Ref,
+                  boxShadowColo4Ref,
+                  imageWidth4Ref,
+                  description4Ref,
+                  fontColor4Ref,
+                  { r: 19, g: 102, b: 255, a: 1 },
+                )
               }
               onMouseLeave={() =>
-                resetWork(image4Ref, boxShadowColo4Ref, imageWidth4Ref, description4Ref, fontColor4Ref)
+                resetWork(
+                  image4Ref,
+                  boxShadowColo4Ref,
+                  imageWidth4Ref,
+                  description4Ref,
+                  fontColor4Ref,
+                )
               }
             >
               Two studies mapping spatial data with ArcGIS

@@ -15,7 +15,7 @@ export const NavigationBar = () => {
 
   useEffect(() => {
     const hash = window.location.hash;
-    if (hash === '#case-studies') scrollToCaseStudies();
+    if (hash === "#case-studies") scrollToCaseStudies();
   }, []);
 
   const expandNavBar = () => {
@@ -132,13 +132,13 @@ export const NavigationBar = () => {
             </a>
             <a
               className={cls(styles.link)}
-              href='https://sophiaa-liu.webflow.io/'
+              href="https://sophiaa-liu.webflow.io/"
             >
               <span>ABOUT</span>
             </a>
             <a
               className={cls(styles.link)}
-              href='https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing'
+              href="https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing"
             >
               <span>RESUME</span>
             </a>
@@ -168,7 +168,7 @@ export const NavigationBar = () => {
               className={cls(styles.link, {
                 [styles.smallMarginRightLink]: width < 1000,
               })}
-              href='https://sophiaa-liu.webflow.io/'
+              href="https://sophiaa-liu.webflow.io/"
             >
               <span>ABOUT</span>
             </a>
@@ -176,7 +176,7 @@ export const NavigationBar = () => {
               className={cls(styles.link, {
                 [styles.smallMarginRightLink]: width < 1000,
               })}
-              href='https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing'
+              href="https://drive.google.com/file/d/1R7hDOouuHvIUphKNlzFBxL5tgAX0H25D/view?usp=sharing"
             >
               RESUME
             </a>

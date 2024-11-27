@@ -28,6 +28,11 @@ export const CaseStudiesLayout1 = () => {
   const imageWidth3Ref = useRef<number>(100);
   const fontColor3Ref = useRef<FontColor>({ r: 0, g: 0, b: 0, a: 1 });
   const description3Ref = useRef<HTMLDivElement>(null);
+  const image4Ref = useRef<HTMLImageElement>(null);
+  const boxShadowOpacity4Ref = useRef<number>(0.1);
+  const imageWidth4Ref = useRef<number>(100);
+  const fontColor4Ref = useRef<FontColor>({ r: 0, g: 0, b: 0, a: 1 });
+  const description4Ref = useRef<HTMLDivElement>(null);
 
   const getBreakPoint = () => {
     if (width > 900) return styles.breakpoint1;
@@ -160,7 +165,7 @@ export const CaseStudiesLayout1 = () => {
             </div>
             <div className={cls(styles.caseDescription)} ref={description1Ref}>
               <a
-                href='https://sophiaa-liu.webflow.io/tempo-ai'
+                href="https://sophiaa-liu.webflow.io/tempo-ai"
                 onMouseEnter={() =>
                   highlightCaseStudy(
                     image1Ref,
@@ -189,7 +194,10 @@ export const CaseStudiesLayout1 = () => {
               <span>10-week Internship @ Tempo Labs (YC S23)</span>
             </div>
           </div>,
-          <a className={cls(styles.imageWrapper, getBreakPoint())} href='https://sophiaa-liu.webflow.io/tempo-ai'>
+          <a
+            className={cls(styles.imageWrapper, getBreakPoint())}
+            href="https://sophiaa-liu.webflow.io/tempo-ai"
+          >
             <img
               src="./images/tempo.png"
               className={cls(styles.image)}
@@ -221,11 +229,15 @@ export const CaseStudiesLayout1 = () => {
         {getCaseStudyOrder(
           <div className={cls(styles.info, getBreakPoint())}>
             <div className={cls(styles.caseTitle)}>
-              <span>EdTech / Mental health / Conversational UX / Mobile</span>
+              <span>Coming soon!</span>
             </div>
-            <div className={cls(styles.caseDescription)} ref={description2Ref}>
+            <div
+              className={cls(styles.caseDescription, styles.noHover)}
+              ref={description2Ref}
+            >
+              {/* TODO: Enable link */}
               <a
-                href='https://sophiaa-liu.webflow.io/develop-for-good'
+                // href="https://sophiaa-liu.webflow.io/wayfarer"
                 onMouseEnter={() =>
                   highlightCaseStudy(
                     image2Ref,
@@ -233,7 +245,7 @@ export const CaseStudiesLayout1 = () => {
                     imageWidth2Ref,
                     description2Ref,
                     fontColor2Ref,
-                    { r: 1, g: 90, b: 83, a: 1 },
+                    { r: 176, g: 0, b: 173, a: 1 },
                   )
                 }
                 onMouseLeave={() =>
@@ -246,18 +258,20 @@ export const CaseStudiesLayout1 = () => {
                   )
                 }
               >
-                Horizon: a mentoring app that prioritizes engagement and
-                flexibility
+                Creating a design system for an early stage SaaS AI start-up
               </a>
             </div>
             <div className={cls(styles.caseTimeline)}>
-              <span>16-week client project @ Develop for Good</span>
+              <span>10-week Internship @ Tempo Labs (YC S23)</span>
             </div>
           </div>,
-          <a className={cls(styles.imageWrapper, getBreakPoint())} href='https://sophiaa-liu.webflow.io/develop-for-good'>
+          <a
+            className={cls(styles.imageWrapper, getBreakPoint())}
+            // href="https://sophiaa-liu.webflow.io/wayfarer"
+          >
             <img
-              src="./images/develop_for_good.png"
-              className={cls(styles.image)}
+              src="./images/design_system.png"
+              className={cls(styles.image, styles.noHover)}
               ref={image2Ref}
               onMouseEnter={() =>
                 highlightCaseStudy(
@@ -266,7 +280,7 @@ export const CaseStudiesLayout1 = () => {
                   imageWidth2Ref,
                   description2Ref,
                   fontColor2Ref,
-                  { r: 1, g: 90, b: 83, a: 1 },
+                  { r: 176, g: 0, b: 173, a: 1 },
                 )
               }
               onMouseLeave={() =>
@@ -286,11 +300,11 @@ export const CaseStudiesLayout1 = () => {
         {getCaseStudyOrder(
           <div className={cls(styles.info, getBreakPoint())}>
             <div className={cls(styles.caseTitle)}>
-              <span>AI tool / Mobile app design / Accessibility</span>
+              <span>EdTech / Mental health / Conversational UX / Mobile</span>
             </div>
             <div className={cls(styles.caseDescription)} ref={description3Ref}>
               <a
-                href='https://sophiaa-liu.webflow.io/wayfarer'
+                href="https://sophiaa-liu.webflow.io/develop-for-good"
                 onMouseEnter={() =>
                   highlightCaseStudy(
                     image3Ref,
@@ -298,7 +312,7 @@ export const CaseStudiesLayout1 = () => {
                     imageWidth3Ref,
                     description3Ref,
                     fontColor3Ref,
-                    { r: 176, g: 0, b: 173, a: 1 },
+                    { r: 1, g: 90, b: 83, a: 1 },
                   )
                 }
                 onMouseLeave={() =>
@@ -311,17 +325,20 @@ export const CaseStudiesLayout1 = () => {
                   )
                 }
               >
-                AI trip-planning tool that combines search and plan for
-                last-minute changes
+                Horizon: a mentoring app that prioritizes engagement and
+                flexibility
               </a>
             </div>
             <div className={cls(styles.caseTimeline)}>
-              <span>14-week independent project</span>
+              <span>16-week client project @ Develop for Good</span>
             </div>
           </div>,
-          <a className={cls(styles.imageWrapper, getBreakPoint())} href='https://sophiaa-liu.webflow.io/wayfarer'>
+          <a
+            className={cls(styles.imageWrapper, getBreakPoint())}
+            href="https://sophiaa-liu.webflow.io/develop-for-good"
+          >
             <img
-              src="./images/wayfarer.png"
+              src="./images/develop_for_good.png"
               className={cls(styles.image)}
               ref={image3Ref}
               onMouseEnter={() =>
@@ -331,7 +348,7 @@ export const CaseStudiesLayout1 = () => {
                   imageWidth3Ref,
                   description3Ref,
                   fontColor3Ref,
-                  { r: 176, g: 0, b: 173, a: 1 },
+                  { r: 1, g: 90, b: 83, a: 1 },
                 )
               }
               onMouseLeave={() =>
@@ -341,6 +358,74 @@ export const CaseStudiesLayout1 = () => {
                   imageWidth3Ref,
                   description3Ref,
                   fontColor3Ref,
+                )
+              }
+            />
+          </a>,
+        )}
+      </div>
+      <div className={cls(styles.caseStudy, getBreakPoint())}>
+        {getCaseStudyOrder(
+          <div className={cls(styles.info, getBreakPoint())}>
+            <div className={cls(styles.caseTitle)}>
+              <span>AI tool / Mobile app design / Accessibility</span>
+            </div>
+            <div className={cls(styles.caseDescription)} ref={description4Ref}>
+              <a
+                href="https://sophiaa-liu.webflow.io/wayfarer"
+                onMouseEnter={() =>
+                  highlightCaseStudy(
+                    image4Ref,
+                    boxShadowOpacity4Ref,
+                    imageWidth4Ref,
+                    description4Ref,
+                    fontColor4Ref,
+                    { r: 176, g: 0, b: 173, a: 1 },
+                  )
+                }
+                onMouseLeave={() =>
+                  resetCaseStudy(
+                    image4Ref,
+                    boxShadowOpacity4Ref,
+                    imageWidth4Ref,
+                    description4Ref,
+                    fontColor4Ref,
+                  )
+                }
+              >
+                AI trip-planning tool that combines search and plan for
+                last-minute changes
+              </a>
+            </div>
+            <div className={cls(styles.caseTimeline)}>
+              <span>14-week independent project</span>
+            </div>
+          </div>,
+          <a
+            className={cls(styles.imageWrapper, getBreakPoint())}
+            href="https://sophiaa-liu.webflow.io/wayfarer"
+          >
+            <img
+              src="./images/wayfarer.png"
+              className={cls(styles.image)}
+              ref={image4Ref}
+              onMouseEnter={() =>
+                highlightCaseStudy(
+                  image4Ref,
+                  boxShadowOpacity4Ref,
+                  imageWidth4Ref,
+                  description4Ref,
+                  fontColor4Ref,
+                  { r: 176, g: 0, b: 173, a: 1 },
+                )
+              }
+              onMouseLeave={() =>
+                resetCaseStudy(
+                  image4Ref,
+                  boxShadowOpacity4Ref,
+                  imageWidth4Ref,
+                  description4Ref,
+                  fontColor4Ref,
                 )
               }
             />
