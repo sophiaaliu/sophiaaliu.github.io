@@ -49,10 +49,9 @@ export const Home = () => {
   };
 
   return (
-    <div className={styles.homeWrapper}>
+    <div className={styles.homeWrapper}> 
       <NavigationBar />
-      <div className={styles.backgroundImage} />{" "}
-      {/* TODO: how does background image work? */}
+      <div className={styles.backgroundImage} />
       <div
         className={cls(styles.home, {
           [styles.breakpoint1]: width > 1260,
