@@ -132,7 +132,7 @@ export const NavigationBar = () => {
             </a>
             <a
               className={cls(styles.link)}
-              href="https://sophiaa-liu.webflow.io/"
+              href="https://sophiaa-liu.webflow.io/about-me"
             >
               <span>ABOUT</span>
             </a>
