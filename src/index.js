@@ -1,6 +1,8 @@
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import "./index.css";
-import { Home } from "./pages/Home";
+// import { Home } from "./pages/Home";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Home />);
+window.location.href = 'https://sophiaa-liu.webflow.io/';
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<Home />);
